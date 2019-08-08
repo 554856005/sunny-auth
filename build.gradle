@@ -20,6 +20,11 @@ configurations {
 }
 
 repositories {
+    mavenLocal() //直接使用本地maven仓库，需要自己搭建nexus
+    //阿里云
+    maven { url "https://maven.aliyun.com/repository/public" }
+    maven { url "https://maven.aliyun.com/repository/spring" }
+    maven { url "http://repo.maven.apache.org/maven2" }
     mavenCentral()
 }
 
@@ -39,6 +44,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'mysql:mysql-connector-java'
+    runtimeOnly 'com.alibaba:druid:1.1.19'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
