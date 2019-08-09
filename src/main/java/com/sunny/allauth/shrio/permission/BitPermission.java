@@ -1,8 +1,8 @@
 package com.sunny.allauth.shrio.permission;
 
 import cn.hutool.core.util.StrUtil;
+import org.apache.shiro.authz.Permission;
 
-import java.security.acl.Permission;
 
 /**
  * BitPermission
@@ -51,7 +51,6 @@ public class BitPermission implements Permission {
 
     }
 
-    @Override
     public boolean implies(org.apache.shiro.authz.Permission p) {
         if(!(p instanceof BitPermission)) {
             return false;

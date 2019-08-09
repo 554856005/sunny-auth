@@ -40,14 +40,12 @@ dependencies {
     implementation 'org.apache.shiro:shiro-core:1.4.1'
     implementation 'cn.hutool:hutool-all:4.6.1'
 
-
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'mysql:mysql-connector-java'
     runtimeOnly 'com.alibaba:druid:1.1.19'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'junit:junit:4.12'
 
 }
 

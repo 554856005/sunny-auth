@@ -11,6 +11,8 @@ import org.apache.shiro.authz.permission.WildcardPermissionResolver;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.realm.jdbc.JdbcRealm;
 import org.apache.shiro.subject.Subject;
+import org.junit.Assert;
+import org.junit.Test;
 
 
 /**
