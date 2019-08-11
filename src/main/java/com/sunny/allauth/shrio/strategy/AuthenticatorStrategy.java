@@ -1,7 +1,6 @@
 package com.sunny.allauth.shrio.strategy;
 
 import cn.hutool.core.util.ArrayUtil;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
