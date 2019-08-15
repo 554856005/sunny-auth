@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
 import org.apache.shiro.cache.CacheManager;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 
 import javax.security.auth.Destroyable;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,7 +23,7 @@ public class RedisCacheManager implements CacheManager, Destroyable {
     /**
      * 缓存操作接口
      */
-    private ICacheManager iCacheManager;
+    private JedisConnectionFactory iCacheManager;
     private final ConcurrentMap<String, Cache> cacheMap = new ConcurrentHashMap<>();
 
     @Override
@@ -32,7 +33,8 @@ public class RedisCacheManager implements CacheManager, Destroyable {
         Cache cache = cacheMap.get(name);
 
         if (null == cache) {
-            cache = new RedisCache<K,V>(name,iCacheManager);
+            cache = new RedisCache<K, V>(name, iCacheManager);
         }
+        return cache;
     }
 }

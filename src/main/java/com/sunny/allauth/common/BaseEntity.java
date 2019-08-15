@@ -1,6 +1,7 @@
 package com.sunny.allauth.common;
 
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,6 +22,7 @@ import static com.sunny.allauth.common.Consts.TIMEZONE;
 @Setter
 @Getter
 @MappedSuperclass
+@EqualsAndHashCode(callSuper = true)
 public class BaseEntity extends RootEntity {
     @Column(columnDefinition = "varchar(36) comment '创建人id'")
     private String createdBy;

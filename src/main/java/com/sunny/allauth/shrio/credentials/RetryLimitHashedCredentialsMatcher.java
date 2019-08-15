@@ -22,8 +22,10 @@ import static com.sunny.allauth.common.Consts.SHIRO_REDIS_CACHE_KEY_PREFIX;
 public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher {
     private RedisCache redisCache;
 
+    @Override
     public boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info) {
-        String userName = (String) token.getPrincipal();
-        Element element = redisCache.get(SHIRO_REDIS_CACHE_KEY_PREFIX);
+//        String userName = (String) token.getPrincipal();
+//        Element element = redisCache.get(SHIRO_REDIS_CACHE_KEY_PREFIX);
+        return true;
     }
 }
