@@ -40,6 +40,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jooq'
     implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
     implementation 'org.apache.shiro:shiro-core:1.4.1'
+    implementation 'org.apache.shiro:shiro-web:1.4.1'
+    implementation 'org.apache.shiro:shiro-spring:1.4.1'
     implementation 'cn.hutool:hutool-all:4.6.1'
 
     compileOnly 'org.projectlombok:lombok'
