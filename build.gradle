@@ -42,6 +42,7 @@ dependencies {
     implementation 'org.apache.shiro:shiro-core:1.4.1'
     implementation 'org.apache.shiro:shiro-web:1.4.1'
     implementation 'org.apache.shiro:shiro-spring:1.4.1'
+    implementation 'org.apache.shiro:shiro-redis:3.2.3'
     implementation 'cn.hutool:hutool-all:4.6.1'
 
     compileOnly 'org.projectlombok:lombok'
