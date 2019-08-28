@@ -1,6 +1,5 @@
-package com.sunny.allauth.shrio.cache;
+package com.sunny.allauth.shrio.session;
 
-import com.sunny.allauth.common.cache.ICacheManager;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
@@ -13,6 +12,7 @@ import java.util.concurrent.ConcurrentMap;
 
 /**
  * RedisCacheManager
+ * 使用Redis作为缓存需要shiro重写cache、cacheManager、SessionDAO
  *
  * @Description
  * @Author JasonLi
@@ -28,7 +28,7 @@ public class RedisCacheManager implements CacheManager, Destroyable {
 
     @Override
     public <K, V> Cache<K, V> getCache(String name) throws CacheException {
-        log.debug("shiro redis cache manager get cache name={}", name);
+        log.debug("shiro redis session manager get session name={}", name);
 
         Cache cache = cacheMap.get(name);
 

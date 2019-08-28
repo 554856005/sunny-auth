@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * UserEntity
@@ -54,10 +52,19 @@ public class UserEntity extends BaseEntity {
      */
     @Column(columnDefinition = "varchar(255) comment '加密盐'")
     private String salt;
-
     /**
      * 状态
      */
+    @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "varchar(10) comment '状态'")
     private ActiveEnum status;
+
+
+    public boolean isNotActive() {
+        return !isActive();
+    }
+
+    public boolean isActive() {
+        return ActiveEnum.ENABLED.equals(this.status);
+    }
 }

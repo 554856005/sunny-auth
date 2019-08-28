@@ -7,7 +7,7 @@ package com.sunny.allauth.common.cache;
  * @Author JasonLi
  * @Date 2019-08-11 21:27
  */
-public abstract class AbstractRedisManager implements ICacheManager {
+public abstract class AbstractRedisManager implements IRedisManager {
     private org.springframework.data.redis.connection.jedis.JedisConnectionFactory jedisConnectionFactory;
 
 }
